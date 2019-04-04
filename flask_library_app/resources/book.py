@@ -1,5 +1,7 @@
 from flask_restful import Resource, reqparse
 
+from flask_library_app.models.book import BookModel
+
 
 class Book(Resource):
     parser = reqparse.RequestParser()
@@ -30,7 +32,11 @@ class Book(Resource):
                         help="genre is required")
 
     def get(self):
-        pass
+        data = Book.parser.parse_args()
+        book = Book.pars_search(data)
+        if book is None:
+            return {"message": "Could not find book"}
+        return
 
     def post(self):
         pass
@@ -40,3 +46,8 @@ class Book(Resource):
 
     def delete(self):
         pass
+
+    @classmethod
+    def pars_search(cls, data):
+        book_id = data['book_id']
+        return BookModel.find_by_id(book_id)

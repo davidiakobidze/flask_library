@@ -21,7 +21,7 @@ CREATE TABLE books
 CREATE TABLE authors_books
 (
   author_id integer,
-  book_id integer,
+  book_id   integer,
   foreign key (author_id) references authors (author_id),
   foreign key (book_id) references books (book_id)
 );
@@ -57,7 +57,7 @@ create table orders
 create table orders_books
 (
   order_id integer,
-  book_id integer,
+  book_id  integer,
   foreign key (order_id) references orders (order_id),
   foreign key (book_id) references books (book_id)
 )

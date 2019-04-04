@@ -2,6 +2,7 @@ from flask import jsonify
 
 from flask_library_app import ma
 from flask_library_app.db import db
+from flask_library_app.lib.exceptions import HandlException
 
 
 class UserModel(db.Model):
@@ -31,7 +32,11 @@ class UserModel(db.Model):
 
     @classmethod
     def find_by_username(cls, username):
-        return cls.query.filter_by(user_name=username).first()
+        user = cls.query.filter_by(user_name=username).first()
+        print(user)
+        if user:
+            raise HandlException("user already exists", status_code=409)
+        return user
 
     def save_to_db(self):
         db.session.add(self)

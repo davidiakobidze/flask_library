@@ -39,9 +39,7 @@ class User(Resource):
 
     def post(self):
         data = User.parser.parse_args()
-        user = UserModel.find_by_username(data['user_name'])
-        if user:
-            return {"message": "user already exists with '{}' username".format(data['user_name'])}, 409
+        UserModel.find_by_username(data['user_name'])
         user = UserModel(**data)
         user.save_to_db()
         return {"message": "user with name {} {} add successfully".format(data['first_name'], data['last_name'])}
