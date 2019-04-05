@@ -1,4 +1,5 @@
 from flask_library_app.db import db
+from flask_library_app.lib.exceptions import HandleException
 
 book_authors = db.Table(
     'books_authors',
@@ -27,12 +28,16 @@ class BookModel(db.Model):
         self.genre = genre
 
     @classmethod
-    def find_by_id(cls, book_id):
-        return cls.query.filter_by(book_id=book_id).first()
+    def find_by_id_get(cls, book_id):
+        book = cls.query.filter_by(book_id=book_id).first()
+        if not book:
+            raise HandleException("Could not find book with id {}", status_code=404)
+        return book
 
     def add_to_db(self):
         db.session.add(self)
         db.session.commit()
+        return self.book_id
 
     def delete_book(self):
         db.session.delete(self)

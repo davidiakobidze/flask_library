@@ -65,4 +65,4 @@ class Author(Resource):
     def pars_search(cls, data):
         first_name = data['first_name']
         last_name = data['last_name']
-        return AuthorModel.find_by_id(first_name, last_name)
+        return AuthorModel.find_by_name(first_name, last_name)

@@ -2,19 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ca0e4c2-7a9b-4665-9bbe-e4190bc987ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flask_library_app/lib/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask_library_app/lib/exceptions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4b4bb39-b436-4138-b5a5-5f84e61fff8d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f4b4bb39-b436-4138-b5a5-5f84e61fff8d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a9cd2101-ef3f-4870-857d-611180add494.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a9cd2101-ef3f-4870-857d-611180add494/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a9cd2101-ef3f-4870-857d-611180add494/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/aeccb1d6-745a-4c3d-8292-3c0ffbbbe58c.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/aeccb1d6-745a-4c3d-8292-3c0ffbbbe58c/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4b4bb39-b436-4138-b5a5-5f84e61fff8d.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4b4bb39-b436-4138-b5a5-5f84e61fff8d/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f4b4bb39-b436-4138-b5a5-5f84e61fff8d/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_library_app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_library_app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_library_app/docker/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/flask_library_app/docker/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_library_app/lib/exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_library_app/lib/exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_library_app/models/author.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_library_app/models/author.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_library_app/models/book.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_library_app/models/book.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_library_app/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_library_app/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask_library_app/resources/author.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_library_app/resources/author.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flask_library_app/resources/book.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_library_app/resources/book.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask_library_app/resources/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask_library_app/resources/user.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,13 +78,56 @@
         <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="books_authors: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flask_library_app/resources/book.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flask_library_app/resources/author.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="376">
+              <caret line="67" column="39" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/flask_library_app/models/book.py">
+        <entry file="file://$PROJECT_DIR$/flask_library_app/models/author.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/flask_library_app/db.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
               <caret line="2" selection-start-line="2" selection-end-line="2" />
@@ -91,10 +136,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://78ecaeb5-ecad-45da-94b2-8d68855c3892/database/postgres/schema/public/table/authors">
+        <entry file="das://78ecaeb5-ecad-45da-94b2-8d68855c3892/database/postgres/schema/public/table/books_authors">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
-              <filtering enabled="true" />
+              <filtering enabled="true">
+                <filter text="" />
+              </filtering>
+              <column-attributes>
+                <column name="ctid" enabled="false" />
+              </column-attributes>
             </state>
           </provider>
         </entry>
@@ -122,11 +172,16 @@
       <find>find_by_username</find>
       <find>user</find>
       <find>NotFoundException</find>
+      <find>HandlException</find>
+      <find>``</find>
+      <find>insert</find>
+      <find>find_by_id</find>
     </findStrings>
     <replaceStrings>
       <replace>BookModel</replace>
       <replace>'roles'</replace>
       <replace>HandlException</replace>
+      <replace>HandleException</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -143,18 +198,18 @@
         <option value="$PROJECT_DIR$/flask_library_app/docker/.sql" />
         <option value="$PROJECT_DIR$/flask_library_app/models/order.py" />
         <option value="$PROJECT_DIR$/flask_library_app/resources/role.py" />
-        <option value="$PROJECT_DIR$/flask_library_app/resources/author.py" />
         <option value="$PROJECT_DIR$/flask_library_app/models/role.py" />
         <option value="$PROJECT_DIR$/flask_library_app/resources/user.py" />
         <option value="$PROJECT_DIR$/flask_library_app/models/user.py" />
-        <option value="$PROJECT_DIR$/flask_library_app/lib/exceptions.py" />
-        <option value="$PROJECT_DIR$/flask_library_app/resources/book.py" />
         <option value="$PROJECT_DIR$/flask_library_app/models/order_book.py" />
-        <option value="$PROJECT_DIR$/flask_library_app/models/author.py" />
         <option value="$PROJECT_DIR$/flask_library_app/docker/data.sql" />
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/flask_library_app/__init__.py" />
+        <option value="$PROJECT_DIR$/flask_library_app/lib/exceptions.py" />
         <option value="$PROJECT_DIR$/flask_library_app/models/book.py" />
+        <option value="$PROJECT_DIR$/flask_library_app/resources/author.py" />
+        <option value="$PROJECT_DIR$/flask_library_app/models/author.py" />
+        <option value="$PROJECT_DIR$/flask_library_app/resources/book.py" />
       </list>
     </option>
   </component>
@@ -185,13 +240,19 @@
               <item name="flask_library" type="b2602c69:ProjectViewProjectNode" />
               <item name="flask_library" type="462c0819:PsiDirectoryNode" />
               <item name="flask_library_app" type="462c0819:PsiDirectoryNode" />
-              <item name="docker" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flask_library" type="b2602c69:ProjectViewProjectNode" />
               <item name="flask_library" type="462c0819:PsiDirectoryNode" />
               <item name="flask_library_app" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flask_library" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flask_library" type="462c0819:PsiDirectoryNode" />
+              <item name="flask_library_app" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -202,13 +263,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="sqlite&#10;postgresql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -276,18 +338,20 @@
       <workItem from="1554187147156" duration="24543000" />
       <workItem from="1554275948206" duration="19465000" />
       <workItem from="1554303349159" duration="12934000" />
-      <workItem from="1554365554566" duration="13145000" />
+      <workItem from="1554365554566" duration="21368000" />
+      <workItem from="1554447557858" duration="1231000" />
+      <workItem from="1554449906580" duration="7708000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100200000" />
+    <option name="totallyTimeSpent" value="117362000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-11" width="1368" height="780" extended-state="6" />
+    <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13030303" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14924243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -301,14 +365,14 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.40620154" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.15844545" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32868218" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.4899225" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32954547" />
-      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.26969698" />
+      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.23560606" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,20 +430,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://aeccb1d6-745a-4c3d-8292-3c0ffbbbe58c/schema/main/table/role">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://aeccb1d6-745a-4c3d-8292-3c0ffbbbe58c/schema/main/table/roles.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://aeccb1d6-745a-4c3d-8292-3c0ffbbbe58c/schema/main/table/role" />
+    <entry file="das://aeccb1d6-745a-4c3d-8292-3c0ffbbbe58c/schema/main/table/roles.sql" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/aeccb1d6-745a-4c3d-8292-3c0ffbbbe58c/console_1.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -387,13 +439,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://aeccb1d6-745a-4c3d-8292-3c0ffbbbe58c/schema/main/table/roles">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://aeccb1d6-745a-4c3d-8292-3c0ffbbbe58c/schema/main/table/roles" />
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.7/site-packages/sqlalchemy/sql/sqltypes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5640">
@@ -428,34 +474,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flask_library_app/models/role.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://aeccb1d6-745a-4c3d-8292-3c0ffbbbe58c/schema/main/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f4b4bb39-b436-4138-b5a5-5f84e61fff8d/database/postgres/schema/public/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f4b4bb39-b436-4138-b5a5-5f84e61fff8d/database/postgres/schema/public/table/roles">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://aeccb1d6-745a-4c3d-8292-3c0ffbbbe58c/schema/main/table/users" />
+    <entry file="das://f4b4bb39-b436-4138-b5a5-5f84e61fff8d/database/postgres/schema/public/table/users" />
+    <entry file="das://f4b4bb39-b436-4138-b5a5-5f84e61fff8d/database/postgres/schema/public/table/roles" />
     <entry file="file://$PROJECT_DIR$/flask_library_app/lib/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -466,30 +487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flask_library_app/lib/exceptions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask_library_app/models/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/david3.7/lib/python3.7/site-packages/sqlalchemy/sql/schema.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="477" selection-start-line="477" selection-end-line="477" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/envs/david3.7/lib/python3.7/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="86">
@@ -497,30 +494,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flask_library_app/models/order_book.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://f4b4bb39-b436-4138-b5a5-5f84e61fff8d/database/postgres/schema/public/table/authors">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask_library_app/resources/book.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-375">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask_library_app/models/author.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/flask_library_app/models/order_book.py" />
+    <entry file="das://f4b4bb39-b436-4138-b5a5-5f84e61fff8d/database/postgres/schema/public/table/authors" />
     <entry file="file://$PROJECT_DIR$/flask_library_app/docker/data.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -542,13 +517,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://a9cd2101-ef3f-4870-857d-611180add494/database/postgres/schema/public/table/books">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://a9cd2101-ef3f-4870-857d-611180add494/database/postgres/schema/public/table/books" />
     <entry file="file://$PROJECT_DIR$/flask_library_app/resources/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -562,27 +531,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flask_library_app/resources/author.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="32" selection-start-column="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flask_library_app/db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -602,17 +554,115 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/78ecaeb5-ecad-45da-94b2-8d68855c3892/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://78ecaeb5-ecad-45da-94b2-8d68855c3892/database/postgres/schema/public/table/authors">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/flask_library_app/lib/exceptions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/david3.7/lib/python3.7/site-packages/sqlalchemy/sql/selectable.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26400">
+          <caret line="1799" selection-start-line="1799" selection-end-line="1799" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/envs/david3.7/lib/python3.7/site-packages/sqlalchemy/sql/schema.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="303" column="62" selection-start-line="303" selection-start-column="62" selection-end-line="303" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/flask_library_app/models/book.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-69">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask_library_app/models/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="35" column="19" lean-forward="true" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask_library_app/models/role.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask_library_app/db.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask_library_app/resources/book.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://78ecaeb5-ecad-45da-94b2-8d68855c3892/database/postgres/schema/public/table/books_authors">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+          <column-attributes>
+            <column name="ctid" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://78ecaeb5-ecad-45da-94b2-8d68855c3892/database/postgres/schema/public/table/authors">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://78ecaeb5-ecad-45da-94b2-8d68855c3892/database/postgres/schema/public/table/books">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true">
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask_library_app/resources/author.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="67" column="39" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask_library_app/models/author.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" />
         </state>
       </provider>
     </entry>

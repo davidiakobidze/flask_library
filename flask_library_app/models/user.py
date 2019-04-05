@@ -2,7 +2,7 @@ from flask import jsonify
 
 from flask_library_app import ma
 from flask_library_app.db import db
-from flask_library_app.lib.exceptions import HandlException
+from flask_library_app.lib.exceptions import HandleException
 
 
 class UserModel(db.Model):
@@ -35,7 +35,7 @@ class UserModel(db.Model):
         user = cls.query.filter_by(user_name=username).first()
         print(user)
         if user:
-            raise HandlException("user already exists", status_code=409)
+            raise HandleException("user already exists", status_code=409)
         return user
 
     def save_to_db(self):

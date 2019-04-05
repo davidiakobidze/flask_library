@@ -25,8 +25,12 @@ class AuthorModel(db.Model):
         }
 
     @classmethod
-    def find_by_id(cls, first_name, last_name):
+    def find_by_name(cls, first_name, last_name):
         return cls.query.filter_by(first_name=first_name, last_name=last_name).first()
+
+    @classmethod
+    def find_by_id(cls, author_id):
+        return cls.query.filter_by(author_id=author_id).first()
 
     def add_to_db(self):
         db.session.add(self)
