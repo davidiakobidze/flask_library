@@ -18,15 +18,15 @@ class OrderModel(db.Model):
     price = db.Column(db.Float)
     total_price = db.Column(db.Float)
     shipping_data = db.Column(db.String(255))
-    order_data = db.Column(db.Date)
+    order_date = db.Column(db.Date)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
     books = db.relationship('BookModel', secondary=order_books)
 
-    def __init__(self, price, total_price, shipping_data, order_data, user_id):
+    def __init__(self, price, total_price, shipping_data, order_date, user_id):
         self.price = price
         self.total_price = total_price
         self.shipping_data = shipping_data
-        self.order_data = order_data
+        self.order_date = order_date
         self.user_id = user_id
 
     def json(self):

@@ -27,7 +27,7 @@ class Order(Resource):
                               help='shipping data is required'
                               )
 
-    order_parser.add_argument('order_data',
+    order_parser.add_argument('order_date',
                               type=str,
                               required=True,
                               help='order data data is required'
