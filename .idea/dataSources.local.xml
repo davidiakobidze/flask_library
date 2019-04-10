@@ -9,7 +9,7 @@
       <auth-required>false</auth-required>
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
-    <data-source name="postgres@localhost" uuid="78ecaeb5-ecad-45da-94b2-8d68855c3892">
+    <data-source name="postgres@localhost" uuid="c4be66f7-8de1-4158-b8f9-23c5f018d707">
       <database-info product="PostgreSQL" version="10.5 (Debian 10.5-2.pgdg90+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="10.5" exact-driver-version="42.2">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>

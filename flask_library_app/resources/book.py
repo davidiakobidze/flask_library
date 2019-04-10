@@ -49,7 +49,6 @@ class Book(Resource):
         data = Book.parser.parse_args()
         parser_authors = Book.parser_authors.parse_args()
         authors_ids = parser_authors['authors']
-        print(data, '-----------------')
         book = BookModel(**data)
         for authors_id in authors_ids:
             author = AuthorModel.find_by_id(authors_id)

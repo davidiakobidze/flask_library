@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="postgres@localhost">
-  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.14">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.15">
     <root id="1">
       <ServerVersion>10.5</ServerVersion>
     </root>
@@ -9,7 +9,7 @@
       <Comment>default administrative connection database</Comment>
       <StateNumber>554</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>561</IntrospectionStateNumber>
+      <IntrospectionStateNumber>582</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
       <Relations>sequence|table|16384|16386|1
@@ -50,8 +50,8 @@ sequence|table|16421|16423|1
       <CreateRole>1</CreateRole>
       <CreateDb>1</CreateDb>
       <CanLogin>1</CanLogin>
-      <Replication>1</Replication>
       <ConnectionLimit>-1</ConnectionLimit>
+      <Replication>1</Replication>
       <BypassRls>1</BypassRls>
     </role>
     <schema id="9" parent="2" name="information_schema">
@@ -86,7 +86,7 @@ sequence|table|16421|16423|1
       <Comment>standard public schema</Comment>
       <StateNumber>352</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>562</IntrospectionStateNumber>
+      <IntrospectionStateNumber>583</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -148,32 +148,32 @@ sequence|table|16421|16423|1
     </extension>
     <sequence id="22" parent="14" name="authors_author_id_seq">
       <ObjectId>16384</ObjectId>
-      <Owner>postgres</Owner>
       <StateNumber>556</StateNumber>
+      <Owner>postgres</Owner>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
     <sequence id="23" parent="14" name="books_book_id_seq">
       <ObjectId>16400</ObjectId>
-      <Owner>postgres</Owner>
       <StateNumber>558</StateNumber>
+      <Owner>postgres</Owner>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
     <sequence id="24" parent="14" name="roles_role_id_seq">
       <ObjectId>16392</ObjectId>
-      <Owner>postgres</Owner>
       <StateNumber>557</StateNumber>
+      <Owner>postgres</Owner>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
     <sequence id="25" parent="14" name="users_user_id_seq">
       <ObjectId>16421</ObjectId>
-      <Owner>postgres</Owner>
       <StateNumber>560</StateNumber>
+      <Owner>postgres</Owner>
       <SequenceIdentity>1..2147483647</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
@@ -240,13 +240,14 @@ sequence|table|16421|16423|1
       <StateNumber>556</StateNumber>
       <ColNames>author_id</ColNames>
       <Unique>1</Unique>
+      <Primary>1</Primary>
     </index>
     <key id="37" parent="26" name="authors_pkey">
       <ObjectId>16391</ObjectId>
       <StateNumber>556</StateNumber>
       <ColNames>author_id</ColNames>
-      <UnderlyingIndexName>authors_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
+      <UnderlyingIndexName>authors_pkey</UnderlyingIndexName>
     </key>
     <column id="38" parent="27" name="book_id">
       <Position>1</Position>
@@ -291,13 +292,14 @@ sequence|table|16421|16423|1
       <StateNumber>558</StateNumber>
       <ColNames>book_id</ColNames>
       <Unique>1</Unique>
+      <Primary>1</Primary>
     </index>
     <key id="45" parent="27" name="books_pkey">
       <ObjectId>16407</ObjectId>
       <StateNumber>558</StateNumber>
       <ColNames>book_id</ColNames>
-      <UnderlyingIndexName>books_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
+      <UnderlyingIndexName>books_pkey</UnderlyingIndexName>
     </key>
     <column id="46" parent="28" name="author_id">
       <Position>1</Position>
@@ -350,13 +352,14 @@ sequence|table|16421|16423|1
       <StateNumber>557</StateNumber>
       <ColNames>role_id</ColNames>
       <Unique>1</Unique>
+      <Primary>1</Primary>
     </index>
     <key id="53" parent="29" name="roles_pkey">
       <ObjectId>16399</ObjectId>
       <StateNumber>557</StateNumber>
       <ColNames>role_id</ColNames>
-      <UnderlyingIndexName>roles_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
+      <UnderlyingIndexName>roles_pkey</UnderlyingIndexName>
     </key>
     <column id="54" parent="30" name="user_id">
       <Position>1</Position>
@@ -402,6 +405,7 @@ sequence|table|16421|16423|1
       <StateNumber>560</StateNumber>
       <ColNames>user_id</ColNames>
       <Unique>1</Unique>
+      <Primary>1</Primary>
     </index>
     <index id="61" parent="30" name="users_user_name_key">
       <ObjectId>16432</ObjectId>
@@ -413,8 +417,8 @@ sequence|table|16421|16423|1
       <ObjectId>16431</ObjectId>
       <StateNumber>560</StateNumber>
       <ColNames>user_id</ColNames>
-      <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
+      <UnderlyingIndexName>users_pkey</UnderlyingIndexName>
     </key>
     <key id="63" parent="30" name="users_user_name_key">
       <ObjectId>16433</ObjectId>

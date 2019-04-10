@@ -15,7 +15,7 @@ class UserModel(db.Model):
     password = db.Column(db.String)
     role_id = db.Column(db.Integer, db.ForeignKey('roles.role_id'), nullable=False)
 
-    # order = db.relationship("Order", uselist=False, backref="parent")
+    orders = db.relationship("OrderModel", backref="user", lazy=True)
 
     def __init__(self, first_name, last_name, user_name, password, role_id):
         self.first_name = first_name

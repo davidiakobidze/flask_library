@@ -18,7 +18,7 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="postgres@localhost" uuid="78ecaeb5-ecad-45da-94b2-8d68855c3892">
+    <data-source source="LOCAL" name="postgres@localhost" uuid="c4be66f7-8de1-4158-b8f9-23c5f018d707">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>

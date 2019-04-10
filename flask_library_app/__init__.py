@@ -18,6 +18,7 @@ from flask_library_app.resources.author import Author
 from flask_library_app.resources.role import Role
 from flask_library_app.resources.book import Book
 from flask_library_app.resources.user import User
+from flask_library_app.resources.order import Order
 
 db.init_app(app)
 app.register_blueprint(mod_err)
@@ -33,3 +34,4 @@ api.add_resource(User, '/user')
 api.add_resource(Role, '/role')
 api.add_resource(Author, '/author')
 api.add_resource(Book, '/book')
+api.add_resource(Order, '/order')
