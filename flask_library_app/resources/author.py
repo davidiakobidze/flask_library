@@ -1,4 +1,6 @@
 from flask_restful import Resource, reqparse
+from flask_jwt import jwt_required
+from flask_library_app.resources.auth import Auth
 
 from flask_library_app.models.author import AuthorModel
 
@@ -27,9 +29,11 @@ class Author(Resource):
                         help="nationality is required"
                         )
 
+    @jwt_required
     def get(self):
         return {"Authors": [x.json() for x in AuthorModel.query.all()]}
 
+    @Auth.admin_required
     def post(self):
         data = Author.parser.parse_args()
         author = Author.pars_search(data)
@@ -39,6 +43,7 @@ class Author(Resource):
         author.add_to_db()
         return {"message": "successfully add author {} {}".format(data['first_name'], data['last_name'])}, 201
 
+    @Auth.admin_required
     def put(self):
         data = Author.parser.parse_args()
         author = Author.pars_search(data)
@@ -51,6 +56,7 @@ class Author(Resource):
         author.add_to_db()
         return {"message": "Author updated successfully"}
 
+    @Auth.admin_required
     def delete(self):
         data = Author.parser.parse_args()
         author = Author.pars_search(data)

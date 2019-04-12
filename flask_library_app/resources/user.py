@@ -40,7 +40,6 @@ class User(Resource):
             return {"message": "could not find user with '{}' username".format(username)}, 404
         return user.json()
 
-    @Auth.admin_required
     def post(self):
         data = User.parser.parse_args()
         user = UserModel.find_by_username(data['user_name'])

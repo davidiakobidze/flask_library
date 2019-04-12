@@ -30,9 +30,21 @@ class Auth(Resource):
         def wrapper(*args, **kwargs):
             verify_jwt_in_request()
             identity = get_jwt_identity()
-            print(identity)
             role = RoleModel.find_by_id(identity['roles'])
             if role.name != 'admin':
+                return jsonify(msg='You have not right'), 403
+            else:
+                return fn(*args, **kwargs)
+
+        return wrapper
+
+    def buyer_required(fn):
+        @wraps(fn)
+        def wrapper(*args, **kwargs):
+            verify_jwt_in_request()
+            identity = get_jwt_identity()
+            role = RoleModel.find_by_id(identity['roles'])
+            if role.name != 'buyer':
                 return jsonify(msg='You have not right'), 403
             else:
                 return fn(*args, **kwargs)

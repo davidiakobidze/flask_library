@@ -1,6 +1,7 @@
 from flask_restful import Resource, reqparse
 
 from flask_library_app.models.role import RoleModel
+from flask_library_app.resources.auth import Auth
 
 
 class Role(Resource):
@@ -12,9 +13,11 @@ class Role(Resource):
                         help='role name is required'
                         )
 
+    @Auth.admin_required
     def get(self):
         return {"roles": [x.json() for x in RoleModel.query.all()]}
 
+    @Auth.admin_required
     def post(self):
         data = Role.parser.parse_args()
         name = data['name']
@@ -26,6 +29,7 @@ class Role(Resource):
             return {"message": "role {} add successfully".format(name)}, 201
         return {"message": "role with name {} already exists".format(name)}, 409
 
+    @Auth.admin_required
     def put(self):
         Role.parser.add_argument('old_name', type=str)
         data = Role.parser.parse_args()
@@ -39,6 +43,7 @@ class Role(Resource):
             return {"message": "role update successfully"}
         return {"message": "cold not find role with {} name".format(old_name)}, 404
 
+    @Auth.admin_required
     def delete(self):
         data = Role.parser.parse_args()
         name = data['name']

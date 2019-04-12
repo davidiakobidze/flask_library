@@ -3,6 +3,7 @@ from flask_restful import Resource, reqparse
 from flask_library_app.db import db
 from flask_library_app.models.book import BookModel
 from flask_library_app.models.order import OrderModel
+from flask_library_app.resources.auth import Auth
 
 
 class Order(Resource):
@@ -40,6 +41,7 @@ class Order(Resource):
                              help='books is required'
                              )
 
+    @Auth.buyer_required
     def post(self):
         order_data = Order.order_parser.parse_args()
         book_data = Order.book_parser.parse_args()
@@ -52,14 +54,17 @@ class Order(Resource):
             db.session.add(order)
         db.session.commit()
 
+    @Auth.buyer_required
     def get(self):
         data = Order.order_parser.parse_args()
 
         order = OrderModel.find_order_by_id(data['order_id'])
         return order.json()
 
+    @Auth.buyer_required
     def put(self):
         pass
 
+    @Auth.buyer_required
     def delete(self):
         pass
