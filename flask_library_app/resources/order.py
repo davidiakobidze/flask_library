@@ -9,39 +9,33 @@ class Order(Resource):
     order_parser = reqparse.RequestParser()
     book_parser = reqparse.RequestParser()
 
+    order_parser.add_argument('order_id',
+                              type=int,
+                              help='order id is required'
+                              )
+
     order_parser.add_argument('price',
                               type=float,
-                              required=True,
                               help='price is required'
                               )
 
     order_parser.add_argument('total_price',
                               type=float,
-                              required=True,
                               help='total price is required'
                               )
 
     order_parser.add_argument('shipping_data',
                               type=str,
-                              required=True,
                               help='shipping data is required'
-                              )
-
-    order_parser.add_argument('order_date',
-                              type=str,
-                              required=True,
-                              help='order data data is required'
                               )
 
     order_parser.add_argument('user_id',
                               type=int,
-                              required=True,
                               help='user is required'
                               )
 
     book_parser.add_argument('books_ids',
                              type=int,
-                             required=True,
                              action='append',
                              help='books is required'
                              )
@@ -59,7 +53,10 @@ class Order(Resource):
         db.session.commit()
 
     def get(self):
-        pass
+        data = Order.order_parser.parse_args()
+
+        order = OrderModel.find_order_by_id(data['order_id'])
+        return order.json()
 
     def put(self):
         pass

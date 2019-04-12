@@ -1,8 +1,11 @@
+import time
+
 from flask import jsonify
 
 from flask_library_app import ma
 from flask_library_app.db import db
 from flask_library_app.lib.exceptions import HandleException
+from flask_library_app.models.book import BookModel
 
 order_books = db.Table(
     "order_books",
@@ -22,16 +25,17 @@ class OrderModel(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
     books = db.relationship('BookModel', secondary=order_books)
 
-    def __init__(self, price, total_price, shipping_data, order_date, user_id):
+    def __init__(self, price, total_price, shipping_data, user_id):
         self.price = price
         self.total_price = total_price
         self.shipping_data = shipping_data
-        self.order_date = order_date
+        self.order_date = time.strftime("%d/%m/%Y")
         self.user_id = user_id
 
     def json(self):
-        user_schema = OrderSchema()
-        output = user_schema.dump(self).data
+        order_schema = OrderSchema()
+        output = order_schema.dump(self).data
+        print(output)
 
         return jsonify({"order": output})
 
@@ -46,3 +50,8 @@ class OrderModel(db.Model):
 class OrderSchema(ma.Schema):
     class Meta:
         model = OrderModel
+
+
+class BookSchema(ma.Schema):
+    class Meta:
+        table = BookModel.__table__

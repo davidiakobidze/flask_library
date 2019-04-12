@@ -31,11 +31,15 @@ class UserModel(db.Model):
         return jsonify({"user": output})
 
     @classmethod
-    def find_by_username(cls, username):
-        user = cls.query.filter_by(user_name=username).first()
-        print(user)
-        if user:
-            raise HandleException("user already exists", status_code=409)
+    def find_by_username(cls, user_name):
+        user = cls.query.filter_by(user_name=user_name).first()
+        return user
+
+    @classmethod
+    def find_by_user_id(cls, user_id):
+        user = cls.query.filter_by(user_id=user_id).first()
+        if not user:
+            raise HandleException("Could not find user", 404)
         return user
 
     def save_to_db(self):

@@ -1,4 +1,5 @@
 from flask_library_app.db import db
+from flask_library_app.lib.exceptions import HandleException
 
 
 class RoleModel(db.Model):
@@ -15,6 +16,13 @@ class RoleModel(db.Model):
     @classmethod
     def find_by_name(cls, name):
         return cls.query.filter_by(name=name).first()
+
+    @classmethod
+    def find_by_id(cls, role_id):
+        role = cls.query.filter_by(role_id=role_id).first()
+        if not role:
+            raise HandleException("Could not find role", 404)
+        return role
 
     def add_to_db(self):
         db.session.add(self)

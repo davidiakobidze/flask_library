@@ -1,6 +1,8 @@
 from flask_restful import Resource, reqparse
 
+from flask_library_app.lib.exceptions import HandleException
 from flask_library_app.models.user import UserModel
+from flask_library_app.resources.auth import Auth
 
 
 class User(Resource):
@@ -31,19 +33,25 @@ class User(Resource):
                         help="user role is required"
                         )
 
+    @Auth.admin_required
     def get(self, username):
         user = UserModel.find_by_username(username)
         if not user:
             return {"message": "could not find user with '{}' username".format(username)}, 404
         return user.json()
 
+    @Auth.admin_required
     def post(self):
         data = User.parser.parse_args()
-        UserModel.find_by_username(data['user_name'])
+        user = UserModel.find_by_username(data['user_name'])
+        if user:
+            raise HandleException("User already exists", status_code=409)
         user = UserModel(**data)
+        print(user)
         user.save_to_db()
         return {"message": "user with name {} {} add successfully".format(data['first_name'], data['last_name'])}
 
+    @Auth.admin_required
     def update(self):
         data = User.parser.parse_args()
         user = UserModel.find_by_username(data['username'])
@@ -59,6 +67,7 @@ class User(Resource):
         user.save_to_db()
         return user.json()
 
+    @Auth.admin_required
     def delete(self):
         data = User.parser.parse_args()
         user = UserModel.find_by_username(data['username'])
