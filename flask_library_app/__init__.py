@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager
 from flask_marshmallow import Marshmallow
 from flask_restful import Api
@@ -14,13 +15,14 @@ app.secret_key = 'jose'
 api = Api(app)
 ma = Marshmallow(app)
 jwt = JWTManager(app)
+bcrypt = Bcrypt(app)
 
+from flask_library_app.resources.auth import Auth
 from flask_library_app.resources.author import Author
 from flask_library_app.resources.role import Role
 from flask_library_app.resources.book import Book
 from flask_library_app.resources.user import User
 from flask_library_app.resources.order import Order
-from flask_library_app.resources.auth import Auth
 
 db.init_app(app)
 app.register_blueprint(mod_err)

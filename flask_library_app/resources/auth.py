@@ -2,14 +2,15 @@ from functools import wraps
 
 from flask import jsonify, request
 from flask_jwt_extended import (
-    verify_jwt_in_request, create_access_token,
+    verify_jwt_in_request,
+    create_access_token,
     get_jwt_identity
 )
 from flask_restful import Resource
-from werkzeug.security import safe_str_cmp
 
-from flask_library_app.resources.role import RoleModel
-from flask_library_app.resources.user import UserModel
+from flask_library_app import bcrypt
+from flask_library_app.models.role import RoleModel
+from flask_library_app.models.user import UserModel
 
 
 class Auth(Resource):
@@ -18,7 +19,9 @@ class Auth(Resource):
         user_name = request.json.get('username')
         password = request.json.get('password')
         user = UserModel.find_by_username(user_name)
-        if not user or not safe_str_cmp(user.password, password):
+        if not user or not bcrypt.check_password_hash(
+                user.password, password
+        ):
             return {"message": "Bad username or password"}, 401
         user_object = {"user_name": user.user_name, "roles": user.role_id}
         access_token = create_access_token(identity=user_object)

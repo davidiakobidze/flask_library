@@ -1,6 +1,6 @@
 from flask import jsonify
 
-from flask_library_app import ma
+from flask_library_app import ma, bcrypt, app
 from flask_library_app.db import db
 from flask_library_app.lib.exceptions import HandleException
 
@@ -21,7 +21,7 @@ class UserModel(db.Model):
         self.first_name = first_name
         self.last_name = last_name
         self.user_name = user_name
-        self.password = password
+        self.password = bcrypt.generate_password_hash(password, app.config.get('BCRYPT_LOG_ROUNDS')).decode()
         self.role_id = role_id
 
     def json(self):
