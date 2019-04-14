@@ -1,4 +1,5 @@
 from flask_library_app.db import db
+from flask_library_app.lib.exceptions import HandleException
 
 
 class AuthorModel(db.Model):
@@ -30,7 +31,10 @@ class AuthorModel(db.Model):
 
     @classmethod
     def find_by_id(cls, author_id):
-        return cls.query.filter_by(author_id=author_id).first()
+        author = cls.query.filter_by(author_id=author_id).first()
+        if not author:
+            raise HandleException("Could not find author with id {}".format(author_id), 404)
+        return author
 
     def add_to_db(self):
         db.session.add(self)

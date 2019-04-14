@@ -1,3 +1,5 @@
+import datetime
+
 from flask import Flask
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager
@@ -11,6 +13,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost:5432/postgres'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['PROPAGATE_EXCEPTIONS'] = True
+app.config['JWT_EXPIRATION_DELTA'] = datetime.timedelta(days=10)
 app.secret_key = 'jose'
 api = Api(app)
 ma = Marshmallow(app)

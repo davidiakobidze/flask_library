@@ -1,31 +1,32 @@
-from flask_restful import Resource, reqparse
 from flask_jwt import jwt_required
-from flask_library_app.resources.auth import Auth
+from flask_restful import Resource, reqparse
 
+from flask_library_app.lib.exceptions import HandleException
 from flask_library_app.models.author import AuthorModel
+from flask_library_app.resources.auth import Auth
 
 
 class Author(Resource):
     parser = reqparse.RequestParser()
 
+    parser.add_argument('author_id',
+                        type=int,
+                        help="author id is required"
+                        )
     parser.add_argument('first_name',
                         type=str,
-                        required=True,
                         help="first name is required"
                         )
     parser.add_argument('last_name',
                         type=str,
-                        required=True,
                         help="last name is required"
                         )
     parser.add_argument('age',
                         type=int,
-                        required=True,
                         help="age is required"
                         )
     parser.add_argument('nationality',
                         type=str,
-                        required=True,
                         help="nationality is required"
                         )
 
@@ -38,7 +39,7 @@ class Author(Resource):
         data = Author.parser.parse_args()
         author = Author.pars_search(data)
         if author:
-            return {"message": "author {} {} already exists".format(data['first_name'], data['last_name'])}, 409
+            raise HandleException("author {} {} already exists".format(data['first_name'], data['last_name']), 409)
         author = AuthorModel(**data)
         author.add_to_db()
         return {"message": "successfully add author {} {}".format(data['first_name'], data['last_name'])}, 201
@@ -46,9 +47,7 @@ class Author(Resource):
     @Auth.admin_required
     def put(self):
         data = Author.parser.parse_args()
-        author = Author.pars_search(data)
-        if author is None:
-            return {"message": "Cold not find author"}, 404
+        author = AuthorModel.find_by_id(data['author_id'])
         author.first_name = data['first_name']
         author.last_name = data['last_name']
         author.age = data['age']
@@ -58,14 +57,10 @@ class Author(Resource):
 
     @Auth.admin_required
     def delete(self):
-        data = Author.parser.parse_args()
-        author = Author.pars_search(data)
-        if author is None:
-            return {"message": "Cold not find author"}, 404
+        author_id = Author.parser.parse_args()["author_id"]
+        author = AuthorModel.find_by_id(author_id)
         author.delete_from_db()
-        return {
-            "message": "Successfully delete author with name {} {}".format(data['firs_name'], data['last_name'])
-        }
+        return {"message": "Successfully delete author"}
 
     @classmethod
     def pars_search(cls, data):
