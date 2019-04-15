@@ -9,7 +9,13 @@ from flask_library_app.resources.author import AuthorModel
 
 class Book(Resource):
     parser = reqparse.RequestParser()
+    book_id_parser = reqparse.RequestParser()
     parser_authors = reqparse.RequestParser()
+
+    book_id_parser.add_argument('book_id',
+                                type=int,
+                                required=True,
+                                help="book id is required is required")
 
     parser.add_argument('isbn',
                         type=str,
@@ -62,13 +68,28 @@ class Book(Resource):
 
         return {"message": "Book add successfully"}, 201
 
-    @Auth.admin_required
-    def put(self):
-        pass
+    # @Auth.admin_required
+    # def put(self):
+    #     data = Book.parser.parse_args()
+    #     author_data = Book.parser_authors.parse_args()
+    #     book_id = Book.book_id_parser.parse_args()['book_id']
+    #     book = BookModel.find_by_id_get(book_id)
+    #     book.isbn = data["isbn"]
+    #     book.title = data["title"]
+    #     book.language = data["language"]
+    #     book.length = data["length"]
+    #     book.genre = data["genre"]
+    #     print(author_data)
+    #     book.authors = author_data['authors']
+    #     book.add_to_db()
+    #     return {"message": "Book update successfully"}
 
     @Auth.admin_required
     def delete(self):
-        pass
+        book_id = Book.parser.parse_args()['book_id']
+        book = BookModel.find_by_id_get(book_id)
+        book.delete_book()
+        return {"message": "Book remove successfully"}
 
     @classmethod
     def pars_search(cls, data):

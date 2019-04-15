@@ -31,7 +31,7 @@ class BookModel(db.Model):
     def find_by_id_get(cls, book_id):
         book = cls.query.filter_by(book_id=book_id).first()
         if not book:
-            raise HandleException("Could not find book with id {}", status_code=404)
+            raise HandleException("Could not find book with id {}".format(book_id), status_code=404)
         return book
 
     def add_to_db(self):
