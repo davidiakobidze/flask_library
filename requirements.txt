@@ -1,0 +1,8 @@
+flask==1.0.3
+flask_bcrypt==0.7.1
+flask_jwt_extended==3.18.2
+flask_marshmallow==0.10.1
+flask_migrate==2.5.2
+flask_restful==0.3.7
+flask_jwt==0.3.2
+psycopg2-binary==2.8.2
